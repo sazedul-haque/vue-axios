@@ -1,4 +1,4 @@
-# vue-axios-github
+# vue-axios
 
 ## Project setup
 ```
