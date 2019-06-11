@@ -1,10 +1,18 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <div>
-      <router-link to="/">Home</router-link>
-      <router-link to="posts">Posts</router-link>
-    </div>
+    <nav class="navbar navbar-dark bg-dark justify-content-center mb-4">
+      <ul class="nav">
+        <li class="nav-iten">
+          <router-link class="nav-link" to="/">Home</router-link>
+        </li>
+        <li class="nav-iten">
+          <router-link class="nav-link" to="posts">Posts</router-link>
+        </li>
+        <li class="nav-iten">
+          <router-link class="nav-link" to="albums">Albums</router-link>
+        </li>
+      </ul>
+    </nav>
     <router-view></router-view>
   </div>
 </template>
@@ -15,13 +23,3 @@ export default {
 }
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

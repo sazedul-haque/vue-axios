@@ -1,10 +1,16 @@
 <template>
-	<div>
+	<div class="container">
 		<h1>Posts</h1>
-		<!-- {{ posts }} -->
-		<div v-for="post in posts">
-			<h2>{{ post.title }}</h2>
-			<p>{{ post.body }}</p>
+		<div class="row">
+			<div class="col-sm-6 mb-4" v-for="post in posts">
+				<div class="card">
+				  	<div class="card-body">
+					    <h3 class="card-title">{{ post.title }}</h3>
+					    <p class="card-text">{{ post.body }}</p>
+					    <a href="#" class="btn btn-secondary">View More</a>
+				  	</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
@@ -18,8 +24,8 @@
 		},
 		mounted () {
 		    this.axios
-		      	.get('https://jsonplaceholder.typicode.com/posts')
-		      	.then(response => (this.posts = response.data))
+		    	.get('https://jsonplaceholder.typicode.com/posts')
+		    	.then(response => (this.posts = response.data))
 		}
 	}
 </script>
